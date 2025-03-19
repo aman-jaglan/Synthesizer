@@ -1,0 +1,16 @@
+City,AgeGroup,MaritalStatus,EducationLevel,YearsOfExperience,AnnualSpending,PreferredChannel
+New York,18-25,Single,High School,1,12000,Online
+New York,25-35,Married,Bachelor,7,45000,In-Store
+Boston,35-45,Married,Master,12,60000,Online
+Boston,45-55,Divorced,PhD,20,80000,Online
+Chicago,18-25,Single,High School,0,10000,In-Store
+Miami,25-35,Married,Bachelor,9,50000,Online
+Miami,35-45,Married,Master,15,70000,In-Store
+Seattle,45-55,Single,Bachelor,18,95000,Online
+Seattle,25-35,Single,High School,5,32000,In-Store
+Dallas,35-45,Married,PhD,10,75000,Online
+Dallas,18-25,Single,Bachelor,2,15000,Online
+Los Angeles,25-35,Married,Master,8,64000,In-Store
+Los Angeles,45-55,Divorced,Bachelor,25,90000,Online
+Houston,35-45,Married,Bachelor,10,81000,In-Store
+Houston,25-35,Single,PhD,3,38000,Online

@@ -95,9 +95,14 @@ class Discriminator(nn.Module):
         return grad_penalty
 
     def forward(self, x):
-        assert x.size(0) % self.pac == 0, "Batch size must be divisible by pac"
-        # flatten if pac > 1
-        return self.seq(x.view(x.size(0), -1))
+        bs = x.size(0)
+        leftover = bs % self.pac
+        if leftover != 0:
+            x = x[:-leftover]  # Drop the leftover
+            bs = x.size(0)
+
+        x = x.view(bs // self.pac, self.pac * x.size(1))
+        return self.seq(x)
 
 
 class Residual(nn.Module):
