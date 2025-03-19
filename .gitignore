@@ -57,3 +57,37 @@ htmlcov/
 
 # Sensitive info
 .env
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Build output directories (adjust as needed)
+dist/
+build/
+
+# Vite cache directory
+.vite/
+
+# Environment variable files
+.env
+.env.local
+.env.*.local
+
+# TypeScript cache file
+*.tsbuildinfo
+
+# Coverage directory (if applicable)
+coverage/
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
