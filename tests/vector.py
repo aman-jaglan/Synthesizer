@@ -76,3 +76,38 @@ kl_divergence_normal(0.0, 1.0, 0.0, 1.0)
 
 # %%
 
+# Implementaiton of Linear Regression using normal equation
+
+def linear_regression_normal_equation(X: list[list[float]], y: list[float]) -> list[float]:
+	X = np.array(X)
+	y = np.array(y)
+
+	dot_product = np.dot(X.T, X)
+	inverse = np.linalg.inv(dot_product)
+	theta = np.dot(np.dot(inverse, X.T), y)
+	return [round(val, 4) for val in theta]
+
+linear_regression_normal_equation([[1, 2], [2, 3], [3, 4]], [3, 5, 7])
+# %%
+# Implementaiton of Linear Regression using gradient descent
+
+def linear_regression_gradient_descent(X: np.ndarray, y: np.ndarray, alpha: float, iterations: int) -> np.ndarray:
+    m, n = X.shape
+    theta = np.zeros((n, 1))
+    error = 0
+    for i in range(0, iterations):
+        prediction = X.dot(theta)
+        error = prediction - y
+        gradient = (1/m) * X.T.dot(error)
+        theta = theta - alpha * gradient
+        print(theta)
+
+    print(theta)    
+    return np.round(theta, 4)
+
+linear_regression_gradient_descent(np.array([[1, 1], [1, 2], [1, 3]]), np.array([1, 2, 3]), 0.01, 2)
+
+# %%
+
+# implementation of the basic autograd operations
+
